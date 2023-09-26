@@ -34,6 +34,7 @@ export const createIssue = (req: Request, res: Response) => {
 
   writeIssuesToFile(issues);
 
+  console.log('Created Issue:', newIssue);
   res.json(newIssue);
 };
 
@@ -71,6 +72,7 @@ export const updateIssue = (req: Request, res: Response) => {
 
       writeIssuesToFile(issues);
 
+      console.log('Updated Issue:', issues[i]);
       return res.json(issues[i]);
     }
   }
@@ -87,7 +89,6 @@ export const deleteIssue = (req: Request, res: Response) => {
       console.log('Deleted Issue:', issues[i]);
       issues.splice(i, 1);
 
-      // Write the updated issues list back to the file
       writeIssuesToFile(issues);
 
       return res.json({ message: 'Issue deleted successfully' });
