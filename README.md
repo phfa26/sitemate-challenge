@@ -29,20 +29,17 @@ To set up the server application locally, follow these steps:
 Navigate to the server application directory:
 
 ```bash
-    Copy code
     cd <server_directory>
 ```
 
 Install the required dependencies:
 
 ```bash
-    Copy code
     npm install
     Start the server:
 ```
 
 ```bash
-Copy code
 npm start
 ```
 
